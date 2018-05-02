@@ -12,7 +12,7 @@ Lorsqu'il est mis en panier un article apparaît dans la zone du panier. Un mêm
 Au-dessus du total se trouve une zone de texte qui permet de filtrer les produits de la boutique. Seuls les produits dont le nom (champ name dans le catalogue, voir ci-dessous) contient la chaîne de caractères présente dans le filtre sont affichés. La saisie s'adapte à chaque caractère frappé par l'utilisateur.
 
 capture d'écran du projet 
-![alt text](https://github.com/benbahri/Mini-projet-JS_Gestion-Panier/raw/master/src/common/images/icon48.png "Illustarion du projet")
+![Illustartion du projet](https://github.com/benbahri/Mini-projet-JS_Gestion-Panier/blob/master/illustration-projet.png "Illustarion du projet")
 Aperçu du projet (vidéo de démo sur la droite, clic droit pous l'enregistrer - notamment en cas de problèème de son dans le navigateur).
 Le travail que vous devez réaliser consiste à écrire le code javascript permettant de mettre en œuvre ce comportement.
 
