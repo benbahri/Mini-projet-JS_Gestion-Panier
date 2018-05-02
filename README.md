@@ -13,7 +13,7 @@ Au-dessus du total se trouve une zone de texte qui permet de filtrer les produit
 
 capture d'écran du projet 
 ![Illustartion du projet](https://github.com/benbahri/Mini-projet-JS_Gestion-Panier/blob/master/illustration-projet.png "Illustarion du projet")
-Aperçu du projet (vidéo de démo sur la droite, clic droit pous l'enregistrer - notamment en cas de problèème de son dans le navigateur).
+
 Le travail que vous devez réaliser consiste à écrire le code javascript permettant de mettre en œuvre ce comportement.
 
 Vous devez utiliser les fichiers contenus dans ce projet Github. Il contient :
@@ -38,38 +38,38 @@ var productSrc = someProduct2.image;     // récupération du champ 'image' du p
                 
 Il est conseillé de traiter les questions progressivement en respectant l'ordre suggéré.
 
-Etudiez le code html du document mini-projet-js-2017.html afin de bien en comprendre la structure et de repérer les différents éléments qui constituent la page, et notamment leurs id.
+1. Etudiez le code html du document mini-projet-js-2017.html afin de bien en comprendre la structure et de repérer les différents éléments qui constituent la page, et notamment leurs id.
 Ce document utilise pour le moment une version incomplète du fichier scripts/project2017.js. En particulier les images des produits ne s'affichent pas encore. C'est normal. C'est votre travail dans ce projet de compléter ce fichier de script.
 
-Dans l'archive vous est fourni le fichier mini-projet-js-2017-static.html. Celui-ci est une copie statique (donc sans code javascript actif) du code HTML correspondant au contenu de la page en action. Ce contenu est donc un exemple de résultat produit par les actions du code javascript lorsqu'il est actif.
+2. Dans l'archive vous est fourni le fichier mini-projet-js-2017-static.html. Celui-ci est une copie statique (donc sans code javascript actif) du code HTML correspondant au contenu de la page en action. Ce contenu est donc un exemple de résultat produit par les actions du code javascript lorsqu'il est actif.
 Etudiez ce code html afin de comprendre ce que doit produire l'exécution de votre code javascript.
 
-En particulier étudiez le code correspondant à chaque produit dans #boutique et chaque achat dans #panier. Vous analyserez en particulier les id qui apparaissent dans les différents éléments. Ils sont de la forme i-text et vous ferez le lien entre ce i et l'indice de l'article dans le catalogue. Vous remarquerez également l'égalité de cette valeur i lorsque le produit et l'achat correspondent (étudiez par exemple l'élément #0-product et #0-achat).
+3. En particulier étudiez le code correspondant à chaque produit dans #boutique et chaque achat dans #panier. Vous analyserez en particulier les id qui apparaissent dans les différents éléments. Ils sont de la forme i-text et vous ferez le lien entre ce i et l'indice de l'article dans le catalogue. Vous remarquerez également l'égalité de cette valeur i lorsque le produit et l'achat correspondent (étudiez par exemple l'élément #0-product et #0-achat).
 
-Afin d'en comprendre le fonctionnement, étudiez attentivement le code de la fonction createShop et les fonctions qu'elle utilise : createProduct, createBlock, createOrderControlBlock. 
+4. Afin d'en comprendre le fonctionnement, étudiez attentivement le code de la fonction createShop et les fonctions qu'elle utilise : createProduct, createBlock, createOrderControlBlock. 
 Comme vous le constatez la fonction createFigureBlock n'est pas implémentée correctement. Ecrivez un code correct pour cette fonction qui doit créer l'élément figure inclus dans l'élément div.produit. L'élément créé doit donc correspondre à ce que l'on peut trouver dans la version statique du projet.
 Un événement keyup est émis à chaque fois que l'on relâche une touche dans un élément input.
 Faites le nécessaire pour que seuls les produits dont le name contient le texte présent dans #filter soient affichés dans la boutique. Le filtrage doit être modifié au fur et à mesure de la saisie des caractères dans #filter.
 
-Etudiez la documentation de la fonction indexOf des chaînes de caractères.
+5. Etudiez la documentation de la fonction indexOf des chaînes de caractères.
 Le code fourni permet la création des éléments div.controle, en particulier grâce à la fonction createOrderControlBlock. Cependant ces contrôles sont pour le moment sans effet.
 Complétez donc le code existant pour mettre en place la gestion de la zone de saisie des quantités, avec le contrôle des valeurs : si l'utilisateur saisit "à la main" une valeur interdite, il faut annuler cette saisie, par exemple en la remplaçant par 0.
 
-Il vous faut aussi gérer l'activation/désactivation du bouton de mise en panier selon que la quantité vaut 0 ou non. Pour l'aspect visuel vous pouvez simplement exploiter différentes valeurs de la propriété CSS opacity.
+6. Il vous faut aussi gérer l'activation/désactivation du bouton de mise en panier selon que la quantité vaut 0 ou non. Pour l'aspect visuel vous pouvez simplement exploiter différentes valeurs de la propriété CSS opacity.
 
-Gérez l'action déclenchée par le bouton de mise en panier (lorsque celui est actif).
+7. Gérez l'action déclenchée par le bouton de mise en panier (lorsque celui est actif).
 Il sera certainement pertinent de définir au préalable une fonction qui construit un élément div.achat (pensez à la gestion des id de ces éléments). Inspirez-vous du code fourni pour réaliser cette fonction.
 
-Vous devez également garantir que la valeur de #montant est mise à jour.
+8. Vous devez également garantir que la valeur de #montant est mise à jour.
 
-N'oubliez pas de gérer le cas où le produit ajouté est déjà présent dans le panier.
+9. N'oubliez pas de gérer le cas où le produit ajouté est déjà présent dans le panier.
 
-Gérez l'action des boutons de suppression du panier. Vous devez toujours maintenir la cohérence de #montant.
+10. Gérez l'action des boutons de suppression du panier. Vous devez toujours maintenir la cohérence de #montant.
 (options) Vous pouvez de manière optionnelle compléter le comportement de la page avec d'autres fonctionnalités. Dans ce cas vous les indiquerez dans le fichier lisezmoi.txt fourni avec votre archive. Voici quelques exemples d'extensions envisageables :
 permettre la modification de la quantité d'un article dans le panier,
 ajouter un bouton qui permet de stocker localement sur le navigateur le panier en cours pour le retrouver lors du prochain chargement de la page, on peut alors utiliser la fonctionnalité "Web Storage". Après une recherche d'informations sur internet, utilisez l'objet localStorage et ses fonctions setItem et getItem pour mémoriser les articles du panier. Au chargement de la page (en supposant que le catalogue n'a pas changé) le panier est affiché dans l'état où il avait été laissé.
 etc.
 Rendez votre travail sous la forme d'une archive. Le nom de cette archive sera votreNom-projetJS.zip. Cette archive contiendra un répertoire dont le nom sera votre-nom-projet. Le contenu de ce répertoire sera organisé ainsi :
-un fichier lisezmoi.txt avec votre nom et prénom. Ce fichier mentionnera pour chacune des questions précédentes si elle a été traitée ou non et les éventuels problèmes de votre solution par rapport au cahier des charges demandé. Si vous avez ajouté des fonctionnalités, vous les détaillerez également dans ce fichier.
+un fichier Readme.md avec votre nom et prénom. Ce fichier mentionnera pour chacune des questions précédentes si elle a été traitée ou non et les éventuels problèmes de votre solution par rapport au cahier des charges demandé. Si vous avez ajouté des fonctionnalités, vous les détaillerez également dans ce fichier.
 les fichiers mentionnés en introduction.
 Tous vos fichiers seront codés en UTF-8. Les noms des fichiers (y compris leurs extensions) seront en minuscules.
